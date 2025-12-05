@@ -2,7 +2,6 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import path from "path";
 import cors from "cors";
-
 import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
 import { connectDB } from "./lib/db.js";
@@ -28,7 +27,10 @@ if (ENV.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
-
+app.get("/test", (req, res) => {
+  // console.log("Test api called");
+  res.json({ message: "Api is working fine!" });
+});
 server.listen(PORT, () => {
   console.log("Server running on port: " + PORT);
   connectDB();
