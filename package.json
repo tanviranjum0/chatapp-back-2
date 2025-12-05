@@ -1,11 +1,10 @@
 {
   "name": "backend",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "build": "babel index.js -o dist/index.js"
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
   },
   "keywords": [],
   "type": "module",
